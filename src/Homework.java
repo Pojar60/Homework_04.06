@@ -32,9 +32,10 @@ public class Homework {
 
    //5
    public boolean isPalindrome1(String myPalindrome){
-       StringBuilder stringBuilder = new StringBuilder(myPalindrome).reverse();
+       String result = myPalindrome.replaceAll("[\\s\\p{Punct}]", "");
+       StringBuilder stringBuilder = new StringBuilder(result).reverse();
        String reversedPalindrome = stringBuilder.toString();
-       boolean isPalindrome = myPalindrome.equals(reversedPalindrome);
+       boolean isPalindrome = result.equals(reversedPalindrome);
        return isPalindrome;
    }
    //6
